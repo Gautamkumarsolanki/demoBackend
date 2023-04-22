@@ -22,7 +22,8 @@ const connectDB = () => {
     });
 };
 connectDB();
+
+app.use("/api",require('./routes/routes'))
 app.use("/",(req,res)=>{
   res.send("Welcome");
 })
-app.use("/api",require('./routes/routes'))
